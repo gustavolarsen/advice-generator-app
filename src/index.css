@@ -21,3 +21,8 @@
 body {
   height: 100vh;
 }
+
+button {
+  border: none;
+  background: none;
+}
