@@ -18,8 +18,14 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   height: 100vh;
+  background-color: var(--dark-blue);
+  color: var(--light-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {

@@ -1,10 +1,5 @@
-import { ButtonDice } from './components/DiceButton.component';
+import { AdviceG } from './components/AdviceComponent';
 
 export function App() {
-  return (
-    <>
-      <p>advice-generator</p>
-      <ButtonDice />
-    </>
-  );
+  return <AdviceG />;
 }

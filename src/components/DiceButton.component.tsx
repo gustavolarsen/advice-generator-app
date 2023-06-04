@@ -9,6 +9,7 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
 `;
+
 export function ButtonDice() {
   return (
     <Button>
