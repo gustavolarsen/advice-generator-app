@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { useAdvice } from '../hooks/useAdvice';
+import { useEffect } from 'react';
 
 const AdviceCard = styled.section`
   background-color: var(--dark-grayish);
@@ -20,11 +22,21 @@ const TitleID = styled.h1`
   padding: 1.5rem;
 `;
 
-export function AdviceG() {
-  const id = 117;
+export function Advice() {
+  const { adviceObject, getAdvice } = useAdvice();
+
+  useEffect(() => {
+    getAdvice();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const id = adviceObject?.slip.id;
+  const advice = adviceObject?.slip.advice;
+
   return (
     <AdviceCard>
       <TitleID>ADVICE #{id}</TitleID>
+      <p>"{advice}"</p>
     </AdviceCard>
   );
 }
