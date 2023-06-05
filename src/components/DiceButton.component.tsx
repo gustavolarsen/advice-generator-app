@@ -8,11 +8,19 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 20px var(--neon-green);
+  }
 `;
 
-export function ButtonDice() {
+interface IButtonDiceProps {
+  onClick: () => void;
+}
+
+export function ButtonDice({ onClick }: IButtonDiceProps) {
   return (
-    <Button>
+    <Button onClick={onClick}>
       <img src={Dice} alt="" />
     </Button>
   );

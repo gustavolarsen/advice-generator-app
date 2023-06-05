@@ -7,7 +7,9 @@ export interface IAdvice {
   };
 }
 
-const getAdvice = () => Api.get<IAdvice>('/advice');
+function getAdvice() {
+  return Api.get<IAdvice>('/advice');
+}
 
 export const AdviceService = {
   getAdvice,

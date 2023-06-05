@@ -1,4 +1,4 @@
-import { Advice } from './components/AdviceComponent';
+import { Advice } from './components/Advice.component';
 
 export function App() {
   return <Advice />;
