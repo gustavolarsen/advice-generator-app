@@ -55,9 +55,9 @@ export function Advice() {
 
   return (
     <AdviceCard>
-      <TitleID>{`ADVICE #${id}`}</TitleID>
-      <TextAdvice>{`"${advice}"`}</TextAdvice>
-      <Divider />
+      <TitleID role="Título e ID do conselho">{`ADVICE #${id}`}</TitleID>
+      <TextAdvice role="Texto do conselho">{`"${advice}"`}</TextAdvice>
+      <Divider role="" />
       <PositionButton>
         <ButtonDice onClick={handleClick} />
       </PositionButton>
