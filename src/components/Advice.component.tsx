@@ -2,20 +2,21 @@ import styled from 'styled-components';
 import { useAdvice } from '../hooks/useAdvice';
 import { useEffect } from 'react';
 import { ButtonDice } from './DiceButton.component';
-
-import DividerImg from '../assets/pattern-divider-desktop.svg';
+import { Divider } from './Divider.component';
 
 const AdviceCard = styled.section`
   background-color: var(--dark-grayish);
   width: 30rem;
   border-radius: 1.125rem;
   padding: 2.5rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 16rem;
+  }
 `;
 
 const TitleID = styled.h1`
@@ -32,13 +33,9 @@ const TextAdvice = styled.p`
   font-size: 1.5rem;
 `;
 
-const Divider = styled.div`
-  padding-bottom: 1.5rem;
-`;
-
 const PositionButton = styled.div`
   position: absolute;
-  bottom: -32px;
+  bottom: -2rem;
 `;
 
 export function Advice() {
@@ -58,12 +55,9 @@ export function Advice() {
 
   return (
     <AdviceCard>
-      <TitleID>ADVICE #{id}</TitleID>
-      <TextAdvice>"{advice}"</TextAdvice>
-      <Divider>
-        <img src={DividerImg} alt="Divisor" />
-      </Divider>
-
+      <TitleID>{`ADVICE #${id}`}</TitleID>
+      <TextAdvice>{`"${advice}"`}</TextAdvice>
+      <Divider />
       <PositionButton>
         <ButtonDice onClick={handleClick} />
       </PositionButton>
