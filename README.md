@@ -8,7 +8,7 @@ Este projeto fo desenvolvido para conclusão do desafio **Advice Generator App**
 
 ## Sobre o Desafio
 
-Este desafio consistia em construir uma aplicação de geração de conselhor consumindo a API [Advice Slip API](https://api.adviceslip.com) e deixando ao mesma como desing mais parecido possivel com exemplo proposto.
+Este desafio consistia em construir uma aplicação de geração de conselhos, consumindo a API [Advice Slip API](https://api.adviceslip.com) e deixando a mesma com o desing mais parecido possivel com exemplo proposto.
 
 ## Tecnologias Utilizadas
 
