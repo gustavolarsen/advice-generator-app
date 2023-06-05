@@ -21,7 +21,7 @@ interface IButtonDiceProps {
 export function ButtonDice({ onClick }: IButtonDiceProps) {
   return (
     <Button onClick={onClick}>
-      <img src={Dice} alt="" />
+      <img src={Dice} alt="Botão para geração aleatória de conselhos" />
     </Button>
   );
 }
