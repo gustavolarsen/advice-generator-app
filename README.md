@@ -25,4 +25,4 @@ Antes de rodar o projeto em sua máquina verifique se você possui Node.js e NOM
 - Rode o comando `npm install` para instalar as depedências;
 - Execute o app com o comando `npm run dev`;
 
-Você também pode experimentar o **Advice Generator App** acessando a seguinte URL (http://)
+Você também pode experimentar o **Advice Generator App** acessando a seguinte URL https://advice-generator-app-gamma-seven.vercel.app/
