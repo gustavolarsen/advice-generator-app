@@ -67,7 +67,7 @@ export const AdviceComponent = () => {
       <TitleID>
         {advice?.id ? `ADVICE #${advice?.id}` : `LOADING ADVICE...`}
       </TitleID>
-      <TextAdvice>{advice?.advice}</TextAdvice>
+      <TextAdvice>{`"${advice?.advice}"`}</TextAdvice>
       <Divider />
       <Button onClick={getAdvice}>
         <img src={IconDice} alt="Button to get new advice" />
