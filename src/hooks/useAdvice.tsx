@@ -1,12 +1,29 @@
-import { useState } from 'react';
-import { AdviceService, IAdvice } from '../services/Advice.service';
+import { useState, useEffect } from 'react';
+import { fetchAdvice } from '../services/AdviceService';
 
-export function useAdvice() {
-  const [adviceObject, setAdviceObject] = useState<IAdvice>();
+type TAdviceType = {
+  id: number;
+  advice: string;
+};
+
+export const useAdvice = () => {
+  const [advice, setAdvice] = useState<TAdviceType>();
+
   const getAdvice = async () => {
-    const { data } = await AdviceService.getAdvice();
-    setAdviceObject(data);
+    try {
+      const data = await fetchAdvice();
+      setAdvice({
+        id: data.slip.id,
+        advice: data.slip.advice,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
-  return { adviceObject, getAdvice };
-}
+  useEffect(() => {
+    getAdvice();
+  }, []);
+
+  return { advice, getAdvice };
+};

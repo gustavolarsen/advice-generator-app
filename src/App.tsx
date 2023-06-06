@@ -1,5 +1,5 @@
-import { Advice } from './components/Advice.component';
+import { AdviceComponent } from './components/AdviceComponent';
 
 export function App() {
-  return <Advice />;
+  return <AdviceComponent />;
 }
